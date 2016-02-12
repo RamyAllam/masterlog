@@ -1,0 +1,10 @@
+- 1.0
+        * Servers Groups ( Dedicated Servers , VPS Nodes , VPS , Shared Servers ) 
+        * Add Servers
+        * Remove Servers 
+        * Mass Password Change
+        * Mass Kernel Update
+        * Multi Command Executions
+        * Reset SSH FingerPrints
+        * Logging System
+        * Find Server using IP Address

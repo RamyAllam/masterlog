@@ -1,0 +1,83 @@
+# Master Log v1.0
+# Copyright 2012 Ramy Allam
+# E-Mail : Linux@ramyallam.com
+# Mobile : 002-01008740937
+# Project URL : http://ramyallam.com/masterlog
+# ===============================================
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# ===============================================
+
+Introduction : 
+==============
+MasterLog is Centralized SSH Authentication System. Using this project you can login to all of your servers from one place in a simply fast way.
+
+How it works : 
+==============
+Master Log program is based on ssh-key authentication through MasterLog server and remote clients. As it copies SSH public key of the server and authenticate it to clients.
+
+
+Features : 
+==============
+- Server Groups : MasterLog has the ability to add your client servers in a famous groups ( Dedicated Servers , VPS , VPS Nodes , Shared Servers ) to access it easily.
+
+- Add/Remove Servers : Using Add/Remove options available in Tools menu you can add and remove servers from MasterLog.
+- MExec : You can execute commands on all servers or specific group at the same time.
+- Kernel Update : MasterLog provides mass kernel update for all added servers or groups.
+- Mass Password Change : MasterLog provides mass password change for all added servers or specific groups, It changes the root password and you can set random or pre-defined password.
+- Find Server : Using this option you can search and log for/to a server using it's IP address.
+- Reset_PublicKey : If you have changed the remote client SSH keys for some reason such as OS reload, You will need to reset SSH finger prints on MasterLog server using Reset_PublicKey option from the tools menu.
+- Logs : All actions which are executed through MasterLog are logged into the logging system.
+
+Requirements :
+==============
+- MasterLog Server : Tested and worked properly on Centos/RHEL 6 and Fedora 17
+Centos/RHEL 5 did not work properly as it needs dialog version +1.1
+- Install dialog package on MasterLog server : 
+yum -y install dialog
+
+- Remote clients : MasterLog is working on most of linux distributions.
+- Run "ssh-keygen" on MasterLog server to generate the required SSH keys ( You may press enter three times or change the requires ).
+
+Install : 
+=========
+MasterLog is very simple, Just type "sh startup.sh" on your MasterLog server inside the program directory.
+
+
+Notes : 
+=======
+- MasterLog server did not run properly on centos/rhel5 as it requires 'dialog' package +1.1 version.
+- Mass Password Change feature requires ( cPanel server ) as it uses "/scripts/chpass" script.
+- Kernel Update feature requires YUM package manager on MasterLog remote client servers.
+- For best view run your terminal client at ( 80 x 24 )
+- Always make sure that MasterLog server IP is added to trusted IP on your remote clients firewall if exists.
+
+
+Add new remote client server :
+======================= 
+- Type `ssh-keygen` command on remote server and press "Enter" three times.
+- Select "Add_Server" from "Tools" menu and follow up the shown instructions.
+- Make sure to add "MasterLog server IP" to the allowed IPs in your remote client server firewall.
+
+
+Support and Documentations:
+===========================
+- MasterLog support is available via http://sourceforge.net/p/masterlog/tickets/
+- MasterLog Documentations are available through : http://sourceforge.net/p/masterlog/wiki/
+
+
+Author:
+=======
+Name : Ramy Allam
+Sr. Linux System Administrator
+Email : linux@ramyallam.com
